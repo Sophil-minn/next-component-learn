@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Index from './pages/Index';
 import List from './pages/List';
 import JsxDemo from './pages/jsxDemo';
+import { ComponentsAndprops } from './pages/componentsAndprops';
 import './App.css';
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
         <Route path="/list" element={<List />}></Route>
         <Route path="/jsxDemo" element={<JsxDemo />}></Route>
         <Route path="/home" element={<Home />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/component" element={<ComponentsAndprops />}></Route>
       </Routes>
     </div>  
   );
