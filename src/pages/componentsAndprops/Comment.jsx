@@ -6,7 +6,7 @@ import { IMG_URL } from '../../consts';
 function Avatar(props) {
   return (
     <img className="Avatar"
-      src={props.user.avatarUrl}
+      src={IMG_URL}
       alt={props.user.name}
     />
   );

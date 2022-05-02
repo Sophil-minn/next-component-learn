@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from "./Comment";
+import Clock from "./Clock";
 
 const comment = {
   date: new Date(),
@@ -11,6 +12,20 @@ const comment = {
 };
 
 
+function ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
+  return (
+    <a href="#" onClick={handleClick}>
+      Click me
+    </a>
+  );
+}
+
+
 const ComponentsAndprops = () => {
   return (
     <div>
@@ -19,6 +34,8 @@ const ComponentsAndprops = () => {
         text={comment.text}
         author={comment.author}
       />
+      <Clock />
+      <ActionLink />
     </div>
   );
 }
