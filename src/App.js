@@ -5,6 +5,7 @@ import List from './pages/List';
 import JsxDemo from './pages/jsxDemo';
 import { ComponentsAndprops } from './pages/componentsAndprops';
 import { LiftingStateUp } from './pages/liftingStateUp';
+import ChildrenProps from './pages/childrenProps';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/component" element={<ComponentsAndprops />}></Route>
         <Route path="/liftingStateUp" element={<LiftingStateUp />}></Route>
+        <Route path="/childrenProps" element={<ChildrenProps />}></Route>
       </Routes>
     </div>  
   );
