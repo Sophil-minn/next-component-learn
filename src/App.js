@@ -10,11 +10,26 @@ import { LiftingStateUp } from './pages/liftingStateUp';
 import './App.css';
 
 const ChildrenProps = React.lazy(() => import('./pages/childrenProps'));
+const Theme = React.lazy(() => import('./pages/contextDemo'));
 function ChildrenPropsLazy() {
   return (
     <div>
+      {/* 在 Suspense 组件中渲染 lazy 组件，
+      如此使得我们可以使用在等待加载 lazy 组件时做优雅降级（如 loading 指示器等）。 */}
       <Suspense fallback={<div>Loading...</div>}>
         <ChildrenProps />
+      </Suspense>
+    </div>
+  );
+}
+
+function ThemeLazy() {
+  return (
+    <div>
+      {/* 在 Suspense 组件中渲染 lazy 组件，
+      如此使得我们可以使用在等待加载 lazy 组件时做优雅降级（如 loading 指示器等）。 */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Theme />
       </Suspense>
     </div>
   );
@@ -34,6 +49,7 @@ function App() {
         <Route path="/component" element={<ComponentsAndprops />}></Route>
         <Route path="/liftingStateUp" element={<LiftingStateUp />}></Route>
         <Route path="/childrenProps" element={<ChildrenPropsLazy />}></Route>
+        <Route path="/context" element={<ThemeLazy />}></Route>
       </Routes>
     </div>  
   );
