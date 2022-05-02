@@ -1,3 +1,4 @@
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Index from './pages/Index';
@@ -5,8 +6,19 @@ import List from './pages/List';
 import JsxDemo from './pages/jsxDemo';
 import { ComponentsAndprops } from './pages/componentsAndprops';
 import { LiftingStateUp } from './pages/liftingStateUp';
-import ChildrenProps from './pages/childrenProps';
+// import ChildrenProps from './pages/childrenProps';
 import './App.css';
+
+const ChildrenProps = React.lazy(() => import('./pages/childrenProps'));
+function ChildrenPropsLazy() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ChildrenProps />
+      </Suspense>
+    </div>
+  );
+}
 
 function App() {
 
@@ -21,7 +33,7 @@ function App() {
         <Route path="/home" element={<Home />}></Route>
         <Route path="/component" element={<ComponentsAndprops />}></Route>
         <Route path="/liftingStateUp" element={<LiftingStateUp />}></Route>
-        <Route path="/childrenProps" element={<ChildrenProps />}></Route>
+        <Route path="/childrenProps" element={<ChildrenPropsLazy />}></Route>
       </Routes>
     </div>  
   );
