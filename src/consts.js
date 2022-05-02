@@ -1,0 +1,1 @@
+export const IMG_URL = 'https://avatars.githubusercontent.com/u/17451427?s=40&v=4';
