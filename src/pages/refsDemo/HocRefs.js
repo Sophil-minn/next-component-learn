@@ -11,10 +11,13 @@ function logProps(WrappedComponent) {
       console.log('new props:', this.props);
     }
     render() {
-      return <WrappedComponent {...this.props} />;
+      const {forwardedRef, ...rest} = this.props;
+      return <WrappedComponent ref={forwardedRef} {...rest}/>;
     }
   }
-  return LogProps;
+  return React.forwardRef((props, ref) => {
+    return <LogProps {...props} forwardedRef={ref} />;
+  });
 }
 
 class FancyButton extends Component {
