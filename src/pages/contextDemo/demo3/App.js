@@ -1,5 +1,6 @@
 import {ThemeContext, themes} from './theme-context';
 import ThemeTogglerButton from './theme-toggler-button';
+import App2 from './App2';
 import React from 'react';
 
 class App extends React.Component {
@@ -36,6 +37,8 @@ function Content() {
   return (
     <div>
       <ThemeTogglerButton />
+      App2: 
+      <App2 theme="light" signedInUser="minn" />
     </div>
   );
 }
