@@ -8,7 +8,7 @@ function TextInputFunc(props) {
   function handleClick() {
     textInput.current.focus();
   }
-
+  // 不管怎样，你可以在函数组件内部使用 ref 属性，只要它指向一个 DOM 元素或 class 组件：
   return (
     <div>
       <input
