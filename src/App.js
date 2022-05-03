@@ -10,7 +10,7 @@ import { LiftingStateUp } from './pages/liftingStateUp';
 import './App.css';
 
 const ChildrenProps = React.lazy(() => import('./pages/childrenProps'));
-const Theme = React.lazy(() => import('./pages/contextDemo'));
+const DynamicTheme = React.lazy(() => import('./pages/contextDemo'));
 function ChildrenPropsLazy() {
   return (
     <div>
@@ -29,7 +29,7 @@ function ThemeLazy() {
       {/* 在 Suspense 组件中渲染 lazy 组件，
       如此使得我们可以使用在等待加载 lazy 组件时做优雅降级（如 loading 指示器等）。 */}
       <Suspense fallback={<div>Loading...</div>}>
-        <Theme />
+        <DynamicTheme />
       </Suspense>
     </div>
   );

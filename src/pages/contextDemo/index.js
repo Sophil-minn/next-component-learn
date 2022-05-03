@@ -1,3 +1,4 @@
-import Theme from './Theme';
+// import Theme from './Theme';
+import DynamicTheme from './DynamicTheme';
 
-export default Theme;
+export default DynamicTheme;
