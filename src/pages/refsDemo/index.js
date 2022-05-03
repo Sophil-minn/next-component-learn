@@ -4,6 +4,9 @@ import AutoFocusTextInput from './AutoFocusTextInput';
 import TextInputFunc from './TextInputFunc';
 import CallBackRefs from './CallBackRefs';
 import TransferRefs from './TransferRefs';
+import ForwardRef from './ForwardRef';
+import HocRefs from './HocRefs';
+import UseRefDemo from './UseRefDemo';
 
 const RefsDemo = () => {
   return (
@@ -23,7 +26,13 @@ const RefsDemo = () => {
 
       <p>在组件间传递回调形式的 refs，就像你可以传递通过 React.createRef() 创建的对象 refs 一样。</p>
       <TransferRefs />
-      
+      <p>将 refs自动地通过组件传递到其一子组件的技巧</p>
+      <ForwardRef />
+      <p>将 在高阶组件中转发 refs 输出组件 props 到控制台</p>
+      <HocRefs />
+      <hr />
+      <p>useRef 例子</p>
+      <UseRefDemo />
     </div>
   );
 }
