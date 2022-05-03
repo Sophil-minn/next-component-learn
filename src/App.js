@@ -6,7 +6,8 @@ import List from './pages/List';
 import JsxDemo from './pages/jsxDemo';
 import { ComponentsAndprops } from './pages/componentsAndprops';
 import { LiftingStateUp } from './pages/liftingStateUp';
-// import ChildrenProps from './pages/childrenProps';
+import { Theme } from './pages/contextDemo';
+import { App as ThemeApp} from './pages/contextDemo';
 import './App.css';
 
 const ChildrenProps = React.lazy(() => import('./pages/childrenProps'));
@@ -50,6 +51,8 @@ function App() {
         <Route path="/liftingStateUp" element={<LiftingStateUp />}></Route>
         <Route path="/childrenProps" element={<ChildrenPropsLazy />}></Route>
         <Route path="/context" element={<ThemeLazy />}></Route>
+        <Route path="/theme" element={<Theme />}></Route>
+        <Route path="/theme-demo3" element={<ThemeApp />}></Route>
       </Routes>
     </div>  
   );
