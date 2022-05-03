@@ -3,6 +3,7 @@ import CustomTextInput from './CustomTextInput';
 import AutoFocusTextInput from './AutoFocusTextInput';
 import TextInputFunc from './TextInputFunc';
 import CallBackRefs from './CallBackRefs';
+import TransferRefs from './TransferRefs';
 
 const RefsDemo = () => {
   return (
@@ -19,6 +20,9 @@ const RefsDemo = () => {
       <TextInputFunc />
       <p>使用 ref 回调函数，在实例的属性中存储对 DOM 节点的引用。</p>
       <CallBackRefs />
+
+      <p>在组件间传递回调形式的 refs，就像你可以传递通过 React.createRef() 创建的对象 refs 一样。</p>
+      <TransferRefs />
       
     </div>
   );
