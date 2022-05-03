@@ -14,6 +14,10 @@ class CustomTextInput extends Component {
     this.textInput.current.focus();
   }
 
+  // React 会在组件挂载时给 current 属性传入 DOM 元素，并在组件卸载时传入 null 值。
+  // ref 会在 componentDidMount 或 componentDidUpdate 生命周期钩子触发前更新。
+  
+
   render() {
     // 告诉 React 我们想把 <input> ref 关联到
     // 构造器里创建的 `textInput` 上

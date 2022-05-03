@@ -5,6 +5,7 @@ import TextInputFunc from './TextInputFunc';
 import CallBackRefs from './CallBackRefs';
 import TransferRefs from './TransferRefs';
 import ForwardRef from './ForwardRef';
+import HocRefs from './HocRefs';
 
 const RefsDemo = () => {
   return (
@@ -26,6 +27,9 @@ const RefsDemo = () => {
       <TransferRefs />
       <p>将 refs自动地通过组件传递到其一子组件的技巧</p>
       <ForwardRef />
+      <p>将 在高阶组件中转发 refs 输出组件 props 到控制台</p>
+      <HocRefs />
+
       
     </div>
   );
