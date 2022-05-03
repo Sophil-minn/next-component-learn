@@ -2,6 +2,7 @@ import React from 'react';
 import CustomTextInput from './CustomTextInput';
 import AutoFocusTextInput from './AutoFocusTextInput';
 import TextInputFunc from './TextInputFunc';
+import CallBackRefs from './CallBackRefs';
 
 const RefsDemo = () => {
   return (
@@ -16,6 +17,8 @@ const RefsDemo = () => {
       <AutoFocusTextInput />
       <div>不管怎样，你可以在函数组件内部使用 ref 属性，只要它指向一个 DOM 元素或 class 组件：</div>
       <TextInputFunc />
+      <p>使用 ref 回调函数，在实例的属性中存储对 DOM 节点的引用。</p>
+      <CallBackRefs />
       
     </div>
   );
