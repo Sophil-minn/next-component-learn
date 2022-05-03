@@ -1,4 +1,6 @@
 import React from 'react';
+import ErrorBoundary from './ErrorBoundary';
+import ErrorComponent from './ErrorComponent';
 
 // Theme context，默认的 theme 是 “light” 值
 const ThemeContext = React.createContext('light');
@@ -17,6 +19,10 @@ class App2 extends React.Component {
       <ThemeContext.Provider value={theme}>
         <UserContext.Provider value={signedInUser}>
           <Layout />
+          <ErrorBoundary>
+          ErrorBoundary-children
+            <ErrorComponent>ErrorComponent - children</ErrorComponent>
+          </ErrorBoundary>
         </UserContext.Provider>
       </ThemeContext.Provider>
     );
