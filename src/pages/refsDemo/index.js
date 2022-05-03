@@ -6,6 +6,7 @@ import CallBackRefs from './CallBackRefs';
 import TransferRefs from './TransferRefs';
 import ForwardRef from './ForwardRef';
 import HocRefs from './HocRefs';
+import UseRefDemo from './UseRefDemo';
 
 const RefsDemo = () => {
   return (
@@ -29,8 +30,9 @@ const RefsDemo = () => {
       <ForwardRef />
       <p>将 在高阶组件中转发 refs 输出组件 props 到控制台</p>
       <HocRefs />
-
-      
+      <hr />
+      <p>useRef 例子</p>
+      <UseRefDemo />
     </div>
   );
 }
