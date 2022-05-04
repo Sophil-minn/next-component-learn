@@ -9,6 +9,7 @@ import { LiftingStateUp } from './pages/liftingStateUp';
 import { Theme } from './pages/contextDemo';
 import { App as ThemeApp} from './pages/contextDemo';
 import RefsDemo from './pages/refsDemo';
+import HocDemo from './pages/hoc';
 
 import './App.css';
 
@@ -40,23 +41,22 @@ function ThemeLazy() {
 function App() {
 
   return (
-    <div>
-      <Routes>
-        <Route path="/" default element={<Home />} />
-        <Route path="/index" element={<Index />} />
-        <Route path="/list" element={<List />} />
-        <Route path="/jsxDemo" element={<JsxDemo />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/component" element={<ComponentsAndprops />} />
-        <Route path="/liftingStateUp" element={<LiftingStateUp />} />
-        <Route path="/childrenProps" element={<ChildrenPropsLazy />} />
-        <Route path="/context" element={<ThemeLazy />} />
-        <Route path="/theme" element={<Theme />} />
-        <Route path="/theme-demo3" element={<ThemeApp />} />
-        <Route path="/refs-demo" element={<RefsDemo />} />
-      </Routes>
-    </div>  
+    <Routes>
+      <Route path="/" default element={<Home />} />
+      <Route path="/index" element={<Index />} />
+      <Route path="/list" element={<List />} />
+      <Route path="/jsxDemo" element={<JsxDemo />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/component" element={<ComponentsAndprops />} />
+      <Route path="/liftingStateUp" element={<LiftingStateUp />} />
+      <Route path="/childrenProps" element={<ChildrenPropsLazy />} />
+      <Route path="/context" element={<ThemeLazy />} />
+      <Route path="/theme" element={<Theme />} />
+      <Route path="/theme-demo3" element={<ThemeApp />} />
+      <Route path="/refs-demo" element={<RefsDemo />} />
+      <Route path="/hoc" element={<HocDemo />} />
+    </Routes>
   );
 }
 
