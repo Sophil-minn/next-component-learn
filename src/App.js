@@ -11,6 +11,7 @@ import { App as ThemeApp} from './pages/contextDemo';
 import RefsDemo from './pages/refsDemo';
 import HocDemo from './pages/hoc';
 import Portals from './pages/portals';
+import RenderProps from './pages/renderProps';
 
 import './App.css';
 
@@ -58,6 +59,7 @@ function App() {
       <Route path="/refs-demo" element={<RefsDemo />} />
       <Route path="/hoc" element={<HocDemo />} />
       <Route path="/portals" element={<Portals />} />
+      <Route path="/renderProps" element={<RenderProps />} />
     </Routes>
   );
 }
