@@ -7,11 +7,12 @@ import JsxDemo from './pages/jsxDemo';
 import { ComponentsAndprops } from './pages/componentsAndprops';
 import { LiftingStateUp } from './pages/liftingStateUp';
 import { Theme } from './pages/contextDemo';
-import { App as ThemeApp} from './pages/contextDemo';
+import { App as ThemeApp } from './pages/contextDemo';
 import RefsDemo from './pages/refsDemo';
 import HocDemo from './pages/hoc';
 import Portals from './pages/portals';
 import RenderProps from './pages/renderProps';
+import LifePeriod from './pages/lifePeriod';
 
 import './App.css';
 
@@ -60,6 +61,7 @@ function App() {
       <Route path="/hoc" element={<HocDemo />} />
       <Route path="/portals" element={<Portals />} />
       <Route path="/renderProps" element={<RenderProps />} />
+      <Route path="/lifePeriod" element={<LifePeriod />} />
     </Routes>
   );
 }

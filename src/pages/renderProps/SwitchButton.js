@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { createPortal } from 'react-dom';
 
 const modalRootEl = document.getElementById('modal-root');
-
 class Switch extends Component {
   constructor(props) {
     super(props);

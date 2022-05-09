@@ -6,6 +6,7 @@ import ClickCounter from './ClickCounter'
 import HoverCounter from './HoverCounter';
 import WithCounterClick from './WithCounterClick';
 import WithCounterHover from './WithCounterHover';
+import Demo1 from './Demo1';
 
 
 localStorage.setItem("userInfo", JSON.stringify({ name: "minn", description: "生活如此多娇" }))
@@ -13,6 +14,9 @@ localStorage.setItem("userInfo", JSON.stringify({ name: "minn", description: "�
 const HocDemo = () => {
   return (
     <div>
+      Demo1
+      <Demo1 title="minnn" />
+
       <UserView />
       <UserHoc />
       <UserHoc3 />
